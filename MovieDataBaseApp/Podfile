@@ -1,0 +1,12 @@
+
+target 'TheMovieDataBaseApp' do
+ 
+  use_frameworks!
+    pod "RxRealm"
+    pod 'RealmSwift'
+    pod 'RxSwift', '6.5.0'
+    pod 'RxCocoa', '6.5.0'
+    pod 'RxDataSources', '~> 5.0'
+    pod 'SDWebImage', '~> 5.0'
+    pod "youtube-ios-player-helper"
+end

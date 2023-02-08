@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GenresCollectionViewCellID" reuseIdentifier="GenresCollectionID" id="gTV-IL-0wX" customClass="GenresCollectionViewCell" customModule="TheMovieDataBaseApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="139" height="195"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="139" height="195"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ob-JT-LSg">
+                        <rect key="frame" x="0.0" y="0.0" width="139" height="195"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l2m-Oi-V3F">
+                                <rect key="frame" x="0.0" y="0.0" width="139" height="195"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97432357069999997" green="0.74049526450000003" blue="0.1943664551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l2m-Oi-V3F" firstAttribute="top" secondItem="3ob-JT-LSg" secondAttribute="top" id="3PW-Ix-V5D"/>
+                            <constraint firstItem="l2m-Oi-V3F" firstAttribute="centerY" secondItem="3ob-JT-LSg" secondAttribute="centerY" id="6j9-ZR-qGm"/>
+                            <constraint firstAttribute="trailing" secondItem="l2m-Oi-V3F" secondAttribute="trailing" id="DGk-mn-4jt"/>
+                            <constraint firstItem="l2m-Oi-V3F" firstAttribute="leading" secondItem="3ob-JT-LSg" secondAttribute="leading" id="Nuy-Q7-Ki9"/>
+                            <constraint firstItem="l2m-Oi-V3F" firstAttribute="centerX" secondItem="3ob-JT-LSg" secondAttribute="centerX" id="NxF-7O-ROi"/>
+                            <constraint firstAttribute="bottom" secondItem="l2m-Oi-V3F" secondAttribute="bottom" id="WeO-qD-Dwn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3ob-JT-LSg" secondAttribute="trailing" id="C5e-QM-lo8"/>
+                <constraint firstItem="3ob-JT-LSg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DmE-kF-mwB"/>
+                <constraint firstAttribute="bottom" secondItem="3ob-JT-LSg" secondAttribute="bottom" id="Dv9-Sh-1IQ"/>
+                <constraint firstItem="3ob-JT-LSg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dVQ-DV-P8e"/>
+            </constraints>
+            <size key="customSize" width="273" height="318"/>
+            <connections>
+                <outlet property="imageView" destination="l2m-Oi-V3F" id="1MY-e1-acv"/>
+                <outlet property="posterImageView" destination="l2m-Oi-V3F" id="y2p-DY-uyy"/>
+                <outlet property="viewCollectionView" destination="3ob-JT-LSg" id="NFm-7F-Y8Q"/>
+            </connections>
+            <point key="canvasLocation" x="332.06106870229007" y="9.5070422535211279"/>
+        </collectionViewCell>
+    </objects>
+</document>
