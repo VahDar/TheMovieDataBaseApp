@@ -27,6 +27,7 @@ class FavoriteViewController: UIViewController {
         setup()
         favViewModel()
         setupObserve()
+        toDetailsScreen()
     }
     
     func favViewModel() {
@@ -59,6 +60,17 @@ class FavoriteViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
   
+    private func toDetailsScreen() {
+       let storybord = UIStoryboard(name: "Main", bundle: nil)
+        tableView.rx.modelSelected(Media.self).subscribe { result in
+            if let detailVC = storybord.instantiateViewController(identifier: "DetailsViewController") as?
+                DetailsViewController {
+                detailVC.detailsViewModel = DetailsViewModel(movie: result.element!)
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
+        }.disposed(by: disposeBag)
+    }
+    
     private func setup() {
         tableView.backgroundColor = UIColor(displayP3Red: 234/255, green: 187/255, blue: 66/255, alpha: 1)
     }

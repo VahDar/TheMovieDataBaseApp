@@ -19,6 +19,7 @@
 		FCB76F37296ACD6200665D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB76F36296ACD6200665D09 /* Assets.xcassets */; };
 		FCB76F3A296ACD6200665D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB76F38296ACD6200665D09 /* LaunchScreen.storyboard */; };
 		FCBB21112979C06500B3D399 /* GenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB21102979C06500B3D399 /* GenresModel.swift */; };
+		FCBBDB1629B11628004BB863 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBDB1529B11628004BB863 /* SplashController.swift */; };
 		FCBC12A9297DB550004D0D0B /* GenresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC12A8297DB550004D0D0B /* GenresViewModel.swift */; };
 		FCBC12AB297DC65F004D0D0B /* GenresNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC12AA297DC65F004D0D0B /* GenresNetWorking.swift */; };
 		FCBC12B4297DE9D3004D0D0B /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC12B3297DE9D3004D0D0B /* GenresViewController.swift */; };
@@ -67,6 +68,7 @@
 		FCB76F39296ACD6200665D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCB76F3B296ACD6200665D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCBB21102979C06500B3D399 /* GenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresModel.swift; sourceTree = "<group>"; };
+		FCBBDB1529B11628004BB863 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		FCBC12A8297DB550004D0D0B /* GenresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewModel.swift; sourceTree = "<group>"; };
 		FCBC12AA297DC65F004D0D0B /* GenresNetWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresNetWorking.swift; sourceTree = "<group>"; };
 		FCBC12B3297DE9D3004D0D0B /* GenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		FCB76F2C296ACD6000665D09 /* TheMovieDataBaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				FCBBDB1429B1160B004BB863 /* SplashController */,
 				FCE6BFC7298BC893008FF9EA /* Favorite */,
 				FCDBDCE22986C0E400E39B25 /* Search */,
 				FCD365A82976EB030041E711 /* AuthenticalViewController */,
@@ -185,6 +188,14 @@
 				FCB76F33296ACD6000665D09 /* Main.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		FCBBDB1429B1160B004BB863 /* SplashController */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBDB1529B11628004BB863 /* SplashController.swift */,
+			);
+			path = SplashController;
 			sourceTree = "<group>";
 		};
 		FCBC12AC297DDCCA004D0D0B /* Genres */ = {
@@ -410,6 +421,7 @@
 				FCC4543D296B235900D657A4 /* ModelAuthentication.swift in Sources */,
 				FCBC12A9297DB550004D0D0B /* GenresViewModel.swift in Sources */,
 				FCBB21112979C06500B3D399 /* GenresModel.swift in Sources */,
+				FCBBDB1629B11628004BB863 /* SplashController.swift in Sources */,
 				FCD3AED729747AC100307728 /* AccountModel.swift in Sources */,
 				FCBD00C4296C9A6E00883AFC /* AuthenticalNetworkingManager.swift in Sources */,
 				FCE6BFCF298BCFCE008FF9EA /* FavoriteViewModel.swift in Sources */,

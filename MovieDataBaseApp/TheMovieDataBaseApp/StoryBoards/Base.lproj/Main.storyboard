@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WnM-mt-xBx">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,6 +9,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash Controller-->
+        <scene sceneID="bzt-Ki-5Ok">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IpU-62-Qvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="LaunchScreenID" id="WnM-mt-xBx" customClass="SplashController" customModule="TheMovieDataBaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yyh-3U-gPR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLounchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="dMa-5X-0uP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo3x" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-lw-tGQ">
+                                <rect key="frame" x="131.66666666666666" y="305" width="129.99999999999997" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="epg-p1-UPV"/>
+                                    <constraint firstAttribute="width" constant="130" id="gx5-hJ-gSe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="men-G6-0cD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dMa-5X-0uP" firstAttribute="trailing" secondItem="men-G6-0cD" secondAttribute="trailing" id="3lo-12-eF3"/>
+                            <constraint firstItem="qv7-lw-tGQ" firstAttribute="centerX" secondItem="yyh-3U-gPR" secondAttribute="centerX" id="6Ly-wJ-hsE"/>
+                            <constraint firstItem="dMa-5X-0uP" firstAttribute="top" secondItem="yyh-3U-gPR" secondAttribute="top" id="7jg-M6-L6p"/>
+                            <constraint firstItem="dMa-5X-0uP" firstAttribute="leading" secondItem="men-G6-0cD" secondAttribute="leading" id="BMf-jR-beG"/>
+                            <constraint firstItem="qv7-lw-tGQ" firstAttribute="centerY" secondItem="yyh-3U-gPR" secondAttribute="centerY" constant="-56" id="tDf-ee-aue"/>
+                            <constraint firstAttribute="bottom" secondItem="dMa-5X-0uP" secondAttribute="bottom" id="wK8-ib-thJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="qv7-lw-tGQ" id="1d3-Ln-nWm"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="OpenAuth" modalPresentationStyle="fullScreen" id="VcO-7R-tg6"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-582" y="32"/>
+        </scene>
         <!--Authentical View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -101,7 +140,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="c8S-i5-Ksx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="150" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dKI-Ee-rdt">
@@ -417,8 +456,10 @@
     </scenes>
     <resources>
         <image name="TMDB2" width="256" height="256"/>
+        <image name="backgroundLounchScreen" width="266.66665649414062" height="474"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="loginImg" width="900" height="1200"/>
+        <image name="logo3x" width="333.33334350585938" height="250"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
