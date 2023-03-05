@@ -16,23 +16,7 @@ class AuthenticalNetworking {
     
     //MARK: - create new token
     
-    //    private func newToken(_ complition: @escaping (String) -> Void) {
-    //        guard let url = URL(string: TheMDBAPIs.newToken.rawValue) else {return}
-    //
-    //        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-    //            guard let data = data, error == nil else {
-    //                print("Error")
-    //                return
-    //            }
-    //            do {
-    //                var result = try JSONDecoder().decode(Token.self, from: data)
-    //                complition(result.requestToken)
-    //            }
-    //            catch {
-    //                print("Error: \(error.localizedDescription)")
-    //            }
-    //        }).resume()
-    //    }
+    
     private func getToken() async throws -> Token {
         
         var urlRequest = URLRequest(url: TheMDBAPIs.newToken)
@@ -63,6 +47,7 @@ class AuthenticalNetworking {
             throw error
         }
     }
+    
     private func bodyValidateSession(username: String, password: String, token: String) -> Data?{
         let creatSession = ValidateToken(username: username, password: password, requestToken: token)
         do {
@@ -72,32 +57,7 @@ class AuthenticalNetworking {
             return nil
         }
     }
-    
-    
-    
-    
-    //    private func validateUser(username: String, password: String, _ complition: @escaping () -> Void) {
-    //
-    //        newToken { token in
-    //            let validateToken = ValidateToken(username: username, password: password, requestToken: token )
-    //        }
-    //        guard let url = URL(string: TheMDBAPIs.validateUser.rawValue) else {return}
-    //
-    //        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-    //            guard let data = data, error == nil else {
-    //                print("Error")
-    //                return
-    //            }
-    //            do {
-    //                var validToken = try JSONDecoder().decode(ValidateToken.self, from: data)
-    //                complition()
-    //            }
-    //            catch {
-    //                print("Error: \(error.localizedDescription)")
-    //            }
-    //        }).resume()
-    //    }
-    //}
+
     // MARK: - Create session id
     private func createSession(token: String) async throws -> CreateSession {
         
@@ -179,42 +139,7 @@ class AuthenticalNetworking {
             return false
         }
     }
-    //        do {
-    //            let result = await withThrowingTaskGroup(of: Void.self) { group in
-    //                group.addTask {
-    //                    let token = try await self.getToken()
-    //                    let validate = try await self.validateUser(username: username, password: password, token: token.requestToken)
-    //                    let sessionID = try await self.createSession(token: validate.requestToken)
-    //                    let getDetails = try await self.getDetails(self.sessionID)
-    //                }
-    //            }
-    //        } catch {
-    //            print(error)
-    //
-    //        }
-    //    }
-    //    func requestAllAuthNetwork(username: String, password: String) async throws -> Bool{
-    //        do {
-    //            try await withThrowingTaskGroup(of: Void.self) { group in
-    //                let token = try await getToken()
-    //                _ =  try await validateUser(username: username, password: password, token: token.requestToken)
-    //
-    //                //                try await group.next()
-    //                group.addTask {
-    //
-    //                    let sessionId = try await self.createSession(token: token.requestToken)
-    //                    _ = try await self.getDetails(sessionId.sessionID)
-    //
-    //                }
-    //                try await group.waitForAll()
-    //
-    //            }
-    //            return true
-    //        } catch {
-    //            print(error)
-    //            return false
-    //        }
-    //}
+    
     
     //MARK: - LogOut
     
@@ -233,8 +158,8 @@ class AuthenticalNetworking {
         } catch let error {
             throw error
         }
-        
     }
+    
     private func logOutBody(sessionID: String) -> Data? {
         let sessionID = SessionIDForDel(sessionID: sessionID)
         do {
