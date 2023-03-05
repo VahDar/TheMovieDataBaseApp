@@ -13,12 +13,6 @@ import RxDataSources
 class GenresTableViewllerCell: UITableViewCell {
     let disposeBag = DisposeBag()
     
-//    let dataSource = RxCollectionViewSectionedAnimatedDataSource<GenreAnimatedSectionModel> {_, collectionView, indexPath, item in
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenresCollectionID",
-//                                                      for: indexPath) as! GenresCollectionViewCell
-//        cell.configere(item)
-//        return cell
-//    }
     var dataSource = RxCollectionViewSectionedReloadDataSource<GenreAnimatedSectionModel> { _, collectionView, indexPath, item in
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenresCollectionID",
                                                       for: indexPath) as! GenresCollectionViewCell
@@ -49,6 +43,7 @@ class GenresTableViewllerCell: UITableViewCell {
             .disposed(by: disposeBag)
     }
     
+    //MARK: - ConfigureCell
     func configureCell(_ genre: Genre, _ segmentControll: Int) async throws {
         genreLable.text = genre.name
         

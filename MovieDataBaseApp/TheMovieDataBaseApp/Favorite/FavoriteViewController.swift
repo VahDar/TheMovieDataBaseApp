@@ -15,7 +15,6 @@ class FavoriteViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var segmentController: UISegmentedControl!
-    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoriteTableViewCell")

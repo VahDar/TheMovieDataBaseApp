@@ -11,9 +11,9 @@ import SDWebImage
 class GenresCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var posterImageView: UIImageView!
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var viewCollectionView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         gonfigureImage()

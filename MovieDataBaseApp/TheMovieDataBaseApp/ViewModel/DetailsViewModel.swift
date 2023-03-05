@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 
 class DetailsViewModel {
+    
     private let disposeBag = DisposeBag()
     private let trailerVideo = BehaviorRelay<String>(value: "")
     var movie: Media
@@ -20,7 +21,7 @@ class DetailsViewModel {
     init(movie: Media) {
         self.movie = movie
         Task {
-           try? await dataDetails()
+            try? await dataDetails()
         }
     }
     
@@ -41,11 +42,11 @@ class DetailsViewModel {
         FavoriteNetworking
             .shared
             .favoriteUpdate(media: GenresViewModel.positionSegmental.rawValue,
-            user: AuthenticalNetworking.shared.userID,
-            add: add,
-            mediaID: movie.id,
-            sessionID: AuthenticalNetworking.shared.sessionID) { responce in
-            complition(responce)
-        }
+                            user: AuthenticalNetworking.shared.userID,
+                            add: add,
+                            mediaID: movie.id,
+                            sessionID: AuthenticalNetworking.shared.sessionID) { responce in
+                complition(responce)
+            }
     }
 }

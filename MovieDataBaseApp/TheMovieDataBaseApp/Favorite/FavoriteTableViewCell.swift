@@ -8,12 +8,10 @@
 import UIKit
 
 class FavoriteTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var titelNameLabel: UILabel!
-    
     @IBOutlet weak var posterImageView: UIImageView!
-    
     @IBOutlet weak var overviewLabel: UILabel!
     
     
@@ -22,7 +20,7 @@ class FavoriteTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setup()
     }
-
+    
     func configure(media: Media) {
         titelNameLabel.text = (media.name ?? "") + (media.title ?? "")
         posterImageView.sd_setImage(with: URL(string: GenresUrl.imagePoster.rawValue + (media.posterPath ?? "")), completed: nil)
@@ -37,8 +35,8 @@ class FavoriteTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+       
     }
     
 }

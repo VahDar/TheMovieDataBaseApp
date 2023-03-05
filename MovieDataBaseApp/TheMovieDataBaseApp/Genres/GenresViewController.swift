@@ -30,6 +30,11 @@ class GenresViewController: ViewController {
         setupUITabBAr()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mainGenreTableView.setContentOffset(.zero, animated: true)
+    }
+    
     func dataTable() {
         Task {
             try await self.viewModel.movieGenres()
