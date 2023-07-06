@@ -28,8 +28,8 @@ class AuthenticalNetworking {
             
         } catch {
             throw error
-        }
     }
+}
     
     // MARK - validate user token
     
@@ -45,8 +45,8 @@ class AuthenticalNetworking {
             print(responce.requestToken)
         } catch let error {
             throw error
-        }
     }
+}
     
     private func bodyValidateSession(username: String, password: String, token: String) -> Data?{
         let creatSession = ValidateToken(username: username, password: password, requestToken: token)
@@ -55,9 +55,9 @@ class AuthenticalNetworking {
         } catch {
             debugPrint("Error \(error.localizedDescription)")
             return nil
-        }
     }
-
+}
+    
     // MARK: - Create session id
     private func createSession(token: String) async throws -> CreateSession {
         
@@ -75,8 +75,8 @@ class AuthenticalNetworking {
             return responce
         } catch let error  {
             throw error
-        }
     }
+}
     
     private func bodyCreateSession(token: String) -> Data?{
         let creatSession = ReaquestBodyCreateSession(requestToken: token)
@@ -86,8 +86,8 @@ class AuthenticalNetworking {
         } catch {
             debugPrint("Error \(error.localizedDescription)")
             return nil
-        }
     }
+}
     
     // MARK: - Create Guset Session
     
@@ -100,8 +100,8 @@ class AuthenticalNetworking {
             StatusResponce.shared.statusResponce(request: urlRequest, responce: GuestSessionId.self)
         } catch {
             throw error
-        }
     }
+}
     
     // MARK: - Get User Info
     
@@ -122,8 +122,8 @@ class AuthenticalNetworking {
             print("accound id is \(accdetail.id)")
         } catch {
             throw error
-        }
     }
+}
     
     //MARK: - requestAllFunc
     
@@ -137,8 +137,8 @@ class AuthenticalNetworking {
         } catch {
             print(error)
             return false
-        }
     }
+}
     
     
     //MARK: - LogOut
@@ -157,8 +157,8 @@ class AuthenticalNetworking {
             return response
         } catch let error {
             throw error
-        }
     }
+}
     
     private func logOutBody(sessionID: String) -> Data? {
         let sessionID = SessionIDForDel(sessionID: sessionID)
@@ -169,6 +169,4 @@ class AuthenticalNetworking {
             return nil
         }
     }
-    
-    
 }

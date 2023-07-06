@@ -25,7 +25,6 @@ class DetailsViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        
     }
     
     private func configure() {
